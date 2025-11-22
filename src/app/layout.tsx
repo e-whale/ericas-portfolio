@@ -29,23 +29,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-bg text-text-main antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
         style={{
-          background: `
-            radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
-            radial-gradient(circle at 80% 100%, rgba(79, 70, 229, 0.08) 0%, transparent 55%),
-            radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
-            #05060F
-          `,
+          background: `linear-gradient(to bottom, #FFFDF8 0%, #FFE1C4 50%, #D7EFFF 100%)`,
         }}
       >
         {/* RPG-style Header */}
-        <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-surface/70 shadow-[0_4px_24px_rgba(0,0,0,0.3),0_0_40px_rgba(99,102,241,0.08)] backdrop-blur-md">
+        <header className="sticky top-0 z-50 w-full border-b border-gray-200/40 bg-[#FFFCF7]/90 backdrop-blur-sm">
           <div className="rpg-container flex items-center justify-between py-4">
             {/* Brand with glowing dot */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-accent shadow-[0_0_12px_rgba(99,102,241,0.9),0_0_4px_rgba(99,102,241,1)]" />
-              <h1 className="bg-gradient-to-r from-accent via-accent to-accent-soft bg-clip-text text-xl font-semibold tracking-tight text-transparent">
+              <div className="h-2 w-2 animate-pulse rounded-full bg-amber-300 shadow-[0_0_6px_rgba(252,211,77,0.5)]" />
+              <h1 className="text-xl font-semibold tracking-tight text-gray-800">
                 byerica.curated
               </h1>
             </Link>
@@ -55,25 +50,25 @@ export default function RootLayout({
               <div className="hidden gap-6 md:flex">
                 <a
                   href="#"
-                  className="text-sm font-medium text-text-main/70 transition-all duration-300 hover:text-accent-soft hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.4)]"
+                  className="relative text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-gray-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#F9C8A0] after:to-[#ffdab9] after:transition-all after:duration-300 hover:after:w-full"
                 >
                   Home
                 </a>
                 <a
                   href="#"
-                  className="text-sm font-medium text-text-main/70 transition-all duration-300 hover:text-accent-soft hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.4)]"
+                  className="relative text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-gray-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#F9C8A0] after:to-[#ffdab9] after:transition-all after:duration-300 hover:after:w-full"
                 >
                   Work
                 </a>
                 <a
                   href="#"
-                  className="text-sm font-medium text-text-main/70 transition-all duration-300 hover:text-accent-soft hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.4)]"
+                  className="relative text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-gray-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#F9C8A0] after:to-[#ffdab9] after:transition-all after:duration-300 hover:after:w-full"
                 >
                   About
                 </a>
                 <a
                   href="#"
-                  className="text-sm font-medium text-text-main/70 transition-all duration-300 hover:text-accent-soft hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.4)]"
+                  className="relative text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-gray-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#F9C8A0] after:to-[#ffdab9] after:transition-all after:duration-300 hover:after:w-full"
                 >
                   Contact
                 </a>
@@ -84,10 +79,10 @@ export default function RootLayout({
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden rounded-full border border-accent/50 bg-accent/12 px-5 py-2 text-sm font-medium text-accent shadow-[0_0_16px_rgba(99,102,241,0.25),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-300 hover:border-accent/70 hover:bg-accent/20 hover:shadow-[0_0_24px_rgba(99,102,241,0.5),inset_0_1px_0_rgba(255,255,255,0.15)] hover:-translate-y-0.5"
+                className="group relative overflow-hidden rounded-full border border-gray-300/60 bg-white/80 px-5 py-2 text-sm font-medium text-gray-700 shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-amber-300/80 hover:bg-amber-50/80 hover:text-gray-800 hover:shadow-[0_4px_12px_rgba(251,191,36,0.15)] hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Resume</span>
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-accent/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-100/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </a>
             </nav>
           </div>
